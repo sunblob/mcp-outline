@@ -1,6 +1,6 @@
 {
   "name": "@fswap/mcp-outline",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MCP server for Outline (getoutline.com) — search, read, create and update wiki documents from Claude",
   "type": "module",
   "bin": {
