@@ -10,7 +10,7 @@ Runs locally over stdio. No install step — clients launch it with `npx`.
 2. Run the interactive setup once:
 
    ```bash
-   npx -y @fswap/mcp-outline setup
+   npx -y @fswap/mcp-outline@latest setup
    ```
 
    It asks for your Outline URL and token, verifies them against `auth.info`, and stores them in your OS config directory (mode `0600`).
@@ -24,7 +24,7 @@ Runs locally over stdio. No install step — clients launch it with `npx`.
      "mcpServers": {
        "outline": {
          "command": "npx",
-         "args": ["-y", "@fswap/mcp-outline"]
+         "args": ["-y", "@fswap/mcp-outline@latest"]
        }
      }
    }
@@ -35,13 +35,13 @@ Runs locally over stdio. No install step — clients launch it with `npx`.
    ```toml
    [mcp_servers.outline]
    command = "npx"
-   args = ["-y", "@fswap/mcp-outline"]
+   args = ["-y", "@fswap/mcp-outline@latest"]
    ```
 
    **Claude Code**:
 
    ```bash
-   claude mcp add outline -- npx -y @fswap/mcp-outline
+   claude mcp add outline -- npx -y @fswap/mcp-outline@latest
    ```
 
 ### Without `setup` (environment variables)
@@ -53,7 +53,7 @@ Environment variables take precedence over the config file, so you can skip `set
   "mcpServers": {
     "outline": {
       "command": "npx",
-      "args": ["-y", "@fswap/mcp-outline"],
+      "args": ["-y", "@fswap/mcp-outline@latest"],
       "env": {
         "OUTLINE_URL": "https://app.getoutline.com",
         "OUTLINE_API_TOKEN": "ol_api_..."
@@ -68,7 +68,7 @@ Codex equivalent:
 ```toml
 [mcp_servers.outline]
 command = "npx"
-args = ["-y", "@fswap/mcp-outline"]
+args = ["-y", "@fswap/mcp-outline@latest"]
 [mcp_servers.outline.env]
 OUTLINE_URL = "https://app.getoutline.com"
 OUTLINE_API_TOKEN = "ol_api_..."
@@ -117,7 +117,7 @@ Never write to stdout from server code — it is the protocol channel. Use `cons
 ## Reset
 
 ```bash
-npx -y @fswap/mcp-outline setup --reset
+npx -y @fswap/mcp-outline@latest setup --reset
 ```
 
 ## License
